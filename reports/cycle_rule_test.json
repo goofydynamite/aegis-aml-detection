@@ -1,0 +1,16 @@
+{
+  "split": "test",
+  "rows": 1384828,
+  "laundering": 791,
+  "threshold": 0.06335454720929712,
+  "model_alerts": 1013,
+  "model_hits": 197,
+  "rules": {
+    "3": {
+      "fires": 9,
+      "extra_alerts": 7,
+      "extra_hits": 2,
+      "fires_hits": 3
+    }
+  }
+}

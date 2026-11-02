@@ -1,0 +1,40 @@
+{
+  "split": "valid",
+  "rows": 1385003,
+  "laundering": 827,
+  "threshold": 0.06335454720929712,
+  "model_alerts": 1000,
+  "model_hits": 236,
+  "rules": {
+    "2": {
+      "fires": 993,
+      "extra_alerts": 934,
+      "extra_hits": 27,
+      "fires_hits": 31
+    },
+    "3": {
+      "fires": 4,
+      "extra_alerts": 4,
+      "extra_hits": 1,
+      "fires_hits": 1
+    },
+    "4": {
+      "fires": 1,
+      "extra_alerts": 1,
+      "extra_hits": 1,
+      "fires_hits": 1
+    },
+    "5": {
+      "fires": 1,
+      "extra_alerts": 1,
+      "extra_hits": 1,
+      "fires_hits": 1
+    },
+    "6": {
+      "fires": 1,
+      "extra_alerts": 1,
+      "extra_hits": 1,
+      "fires_hits": 1
+    }
+  }
+}
