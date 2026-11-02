@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 240" width="780" height="240" role="img">
+  <title>Laundering caught in the top 5,000 alerts: 0.6%, 1.0%, 45.0% and 66.5%</title>
+  <text x="10" y="26" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="16" font-weight="600" fill="#8b949e">Share of all laundering caught in the top 5,000 alerts</text>
+  <text x="270" y="71" text-anchor="end" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="14" fill="#8b949e">Old prototype (Isolation Forest)</text>
+  <rect x="285" y="54" width="0" height="24" rx="5" fill="#8b949e">
+    <animate attributeName="width" from="0" to="3.0" dur="1.2s" begin="0.30s" fill="freeze"
+             calcMode="spline" keyTimes="0;1" keySplines="0.2 0.8 0.2 1"/>
+  </rect>
+  <text x="298.0" y="71" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#8b949e" opacity="0">0.6%
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.30s" fill="freeze"/>
+  </text>
+  <text x="270" y="117" text-anchor="end" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="14" fill="#8b949e">Isolation Forest + new features</text>
+  <rect x="285" y="100" width="0" height="24" rx="5" fill="#8b949e">
+    <animate attributeName="width" from="0" to="4.2" dur="1.2s" begin="0.65s" fill="freeze"
+             calcMode="spline" keyTimes="0;1" keySplines="0.2 0.8 0.2 1"/>
+  </rect>
+  <text x="299.2" y="117" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#8b949e" opacity="0">1.0%
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="1.65s" fill="freeze"/>
+  </text>
+  <text x="270" y="163" text-anchor="end" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="14" fill="#8b949e">LightGBM, LI-Small test</text>
+  <rect x="285" y="146" width="0" height="24" rx="5" fill="#2f81f7">
+    <animate attributeName="width" from="0" to="189.0" dur="1.2s" begin="1.00s" fill="freeze"
+             calcMode="spline" keyTimes="0;1" keySplines="0.2 0.8 0.2 1"/>
+  </rect>
+  <text x="484.0" y="163" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#2f81f7" opacity="0">45.0%
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.00s" fill="freeze"/>
+  </text>
+  <text x="270" y="209" text-anchor="end" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="14" fill="#8b949e">LightGBM, unseen HI-Small</text>
+  <rect x="285" y="192" width="0" height="24" rx="5" fill="#3fb950">
+    <animate attributeName="width" from="0" to="279.3" dur="1.2s" begin="1.35s" fill="freeze"
+             calcMode="spline" keyTimes="0;1" keySplines="0.2 0.8 0.2 1"/>
+  </rect>
+  <text x="574.3" y="209" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="15" font-weight="700" fill="#3fb950" opacity="0">66.5%
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="2.35s" fill="freeze"/>
+  </text>
+</svg>

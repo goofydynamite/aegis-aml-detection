@@ -1,10 +1,35 @@
-# Project Aegis: Anti-Money-Laundering Detection on Transaction Networks
+<div align="center">
+
+<h1>🛡️ Project Aegis</h1>
+
+<h3>Anti-Money-Laundering Detection on Transaction Networks</h3>
+
+<a href="#results-li-small-chronological-hold-out">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=2800&pause=900&color=2F81F7&center=true&vCenter=true&width=720&lines=Ranks+6.9M+payments+by+laundering+risk;100+of+the+top+100+alerts+are+real+laundering;Tested+unchanged+on+unseen+data%3A+99+of+100;Finds+money+cycles+of+any+length;Live+FastAPI+scoring+in+about+20+ms" alt="Ranks 6.9M payments by laundering risk. 100 of the top 100 alerts are real laundering. Tested unchanged on unseen data: 99 of 100. Finds money cycles of any length. Live FastAPI scoring in about 20 ms." />
+</a>
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.10+" />
+  <img src="https://img.shields.io/badge/LightGBM-gradient%20boosting-2F81F7?style=for-the-badge" alt="LightGBM" />
+  <img src="https://img.shields.io/badge/Polars-dataframes-CD792C?style=for-the-badge&logo=polars&logoColor=white" alt="Polars" />
+  <img src="https://img.shields.io/badge/FastAPI-live%20scoring-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/tests-45%20passing-3FB950?style=for-the-badge&logo=pytest&logoColor=white" alt="45 tests passing" />
+</p>
+
+<img src="assets/pipeline.svg" alt="Pipeline: 6.9M payments, ingest, 30 features, LightGBM with a cycle rule, then alerts, cases, dashboard and API" width="100%" />
+
+</div>
 
 Aegis ranks financial transactions by money-laundering risk so an investigation team
 can review the riskiest first. It is trained and evaluated on the
 [IBM AML dataset](https://www.kaggle.com/datasets/ealtman2019/ibm-transactions-for-anti-money-laundering-aml)
 (Altman et al., *Realistic Synthetic Financial Transactions for Anti-Money Laundering
 Models*, NeurIPS 2023): 6.9 million transactions, 706k accounts, 0.05% laundering.
+
+<p align="center">
+  <img src="assets/results.svg" alt="Laundering caught in the top 5,000 alerts: old prototype 0.6%, Isolation Forest with new features 1.0%, LightGBM on LI-Small test 45.0%, LightGBM on unseen HI-Small 66.5%" width="90%" />
+</p>
 
 ## Results (LI-Small, chronological hold-out)
 
@@ -57,6 +82,10 @@ python scripts/evaluate_transfer.py --config config.hi-small.yaml --model models
 
 The model's features depend on each account's history, so the service keeps that history in
 memory ([src/aegis/online.py](src/aegis/online.py)) and updates it with every payment.
+
+<p align="center">
+  <img src="assets/cycle.svg" alt="Six payments form a cycle: 1 to 2 to 3 to 4 to 5 to 6 and back to 1. The closing payment has a model score of only 0.029 but is alerted by the cycle rule." width="85%" />
+</p>
 
 ```bash
 python -m aegis state                              # build the account memory (about 5 minutes)
@@ -139,6 +168,7 @@ aegis/
 ├── config.yaml              # dataset, split, model and evaluation settings
 ├── config.hi-small.yaml     # the same settings for HI-Small
 ├── app/dashboard.py         # Streamlit investigator dashboard
+├── assets/                  # animated diagrams used in this README
 ├── src/aegis/
 │   ├── __main__.py          # CLI: python -m aegis {ingest,features,train,alerts,state,all}
 │   ├── config.py

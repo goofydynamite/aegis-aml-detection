@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 938 180" width="938" height="180" role="img">
+  <title>Aegis pipeline: payments to ingest, features, LightGBM and alerts</title>
+  <rect x="10" y="48" width="150" height="84" rx="12" fill="#2f81f7" fill-opacity="0.08"
+        stroke="#2f81f7" stroke-width="2" stroke-opacity="0.35">
+    <animate attributeName="stroke-opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0.000;0.180;1.000" values="1;0.35;0.35"/>
+  </rect>
+  <text x="85.0" y="84" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="17" font-weight="600" fill="#2f81f7">6.9M payments</text>
+  <text x="85.0" y="108" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="12.5" fill="#8b949e">IBM AML dataset</text>
+  <line x1="164" y1="90.0" x2="192" y2="90.0" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M191,85.0 L198,90.0 L191,95.0" fill="none" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <circle r="4.5" fill="#d29922" opacity="0">
+    <animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" path="M164,90.0 L198,90.0"
+                   keyPoints="0;0;1;1" keyTimes="0;0.120;0.200;1"/>
+    <animate attributeName="opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0;0.120;0.121;0.200;0.201;1" values="0;0;1;1;0;0"/>
+  </circle>
+  <rect x="202" y="48" width="150" height="84" rx="12" fill="#2f81f7" fill-opacity="0.08"
+        stroke="#2f81f7" stroke-width="2" stroke-opacity="0.35">
+    <animate attributeName="stroke-opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0.000;0.199;0.200;0.380;1.000" values="0.35;0.35;1;0.35;0.35"/>
+  </rect>
+  <text x="277.0" y="84" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="17" font-weight="600" fill="#2f81f7">Ingest</text>
+  <text x="277.0" y="108" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="12.5" fill="#8b949e">USD, labels, clean</text>
+  <line x1="356" y1="90.0" x2="384" y2="90.0" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M383,85.0 L390,90.0 L383,95.0" fill="none" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <circle r="4.5" fill="#d29922" opacity="0">
+    <animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" path="M356,90.0 L390,90.0"
+                   keyPoints="0;0;1;1" keyTimes="0;0.320;0.400;1"/>
+    <animate attributeName="opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0;0.320;0.321;0.400;0.401;1" values="0;0;1;1;0;0"/>
+  </circle>
+  <rect x="394" y="48" width="150" height="84" rx="12" fill="#2f81f7" fill-opacity="0.08"
+        stroke="#2f81f7" stroke-width="2" stroke-opacity="0.35">
+    <animate attributeName="stroke-opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0.000;0.399;0.400;0.580;1.000" values="0.35;0.35;1;0.35;0.35"/>
+  </rect>
+  <text x="469.0" y="84" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="17" font-weight="600" fill="#2f81f7">30 features</text>
+  <text x="469.0" y="108" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="12.5" fill="#8b949e">behaviour + cycles</text>
+  <line x1="548" y1="90.0" x2="576" y2="90.0" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M575,85.0 L582,90.0 L575,95.0" fill="none" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <circle r="4.5" fill="#d29922" opacity="0">
+    <animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" path="M548,90.0 L582,90.0"
+                   keyPoints="0;0;1;1" keyTimes="0;0.520;0.600;1"/>
+    <animate attributeName="opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0;0.520;0.521;0.600;0.601;1" values="0;0;1;1;0;0"/>
+  </circle>
+  <rect x="586" y="48" width="150" height="84" rx="12" fill="#2f81f7" fill-opacity="0.08"
+        stroke="#2f81f7" stroke-width="2" stroke-opacity="0.35">
+    <animate attributeName="stroke-opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0.000;0.599;0.600;0.780;1.000" values="0.35;0.35;1;0.35;0.35"/>
+  </rect>
+  <text x="661.0" y="84" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="17" font-weight="600" fill="#2f81f7">LightGBM</text>
+  <text x="661.0" y="108" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="12.5" fill="#8b949e">+ cycle rule</text>
+  <line x1="740" y1="90.0" x2="768" y2="90.0" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M767,85.0 L774,90.0 L767,95.0" fill="none" stroke="#8b949e" stroke-width="2" stroke-opacity="0.6"/>
+  <circle r="4.5" fill="#d29922" opacity="0">
+    <animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" path="M740,90.0 L774,90.0"
+                   keyPoints="0;0;1;1" keyTimes="0;0.720;0.800;1"/>
+    <animate attributeName="opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0;0.720;0.721;0.800;0.801;1" values="0;0;1;1;0;0"/>
+  </circle>
+  <rect x="778" y="48" width="150" height="84" rx="12" fill="#2f81f7" fill-opacity="0.08"
+        stroke="#2f81f7" stroke-width="2" stroke-opacity="0.35">
+    <animate attributeName="stroke-opacity" dur="6.0s" repeatCount="indefinite"
+             keyTimes="0.000;0.799;0.800;0.980;1.000" values="0.35;0.35;1;0.35;0.35"/>
+  </rect>
+  <text x="853.0" y="84" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="17" font-weight="600" fill="#2f81f7">Alerts</text>
+  <text x="853.0" y="108" text-anchor="middle" font-family='Segoe UI, Helvetica, Arial, sans-serif' font-size="12.5" fill="#8b949e">cases · dashboard · API</text>
+</svg>
