@@ -1,0 +1,42 @@
+# Project Aegis pipeline configuration. Paths are relative to this file.
+seed: 42
+
+data:
+  raw_dir: data/raw
+  dataset: HI-Small
+  processed_dir: data/processed
+  # Drop trailing days with < 1% of a median day's volume. In AMLworld these
+  # near-empty days are ~60% laundering and leak "quiet period => crime".
+  min_day_share: 0.01
+
+outputs:
+  models_dir: models
+  reports_dir: reports/HI-Small
+
+# Chronological split by row order (data is sorted by timestamp).
+# Rows sharing a minute never straddle a boundary.
+split:
+  train_frac: 0.6
+  valid_frac: 0.2
+
+lightgbm:
+  learning_rate: 0.05
+  num_leaves: 63
+  min_child_samples: 100
+  feature_fraction: 0.8
+  bagging_fraction: 0.8
+  bagging_freq: 1
+  lambda_l2: 1.0
+  scale_pos_weight: 1.0
+  # Fixed tree count: early stopping landed anywhere from 208 to 1,219 trees between runs.
+  num_boost_round: 400
+  early_stopping_rounds: 0   # 0 turns it off
+
+isolation_forest:
+  n_estimators: 200
+  fit_sample_size: 200000
+
+evaluation:
+  k_values: [100, 500, 1000, 5000]
+  pattern_recall_k: 5000     # per-typology recall measured in the top-k alerts
+  top_alerts_export: 1000    # rows written to reports/top_alerts.csv
