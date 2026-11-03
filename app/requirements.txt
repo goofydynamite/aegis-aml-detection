@@ -1,0 +1,8 @@
+# Dependencies for the hosted dashboard only (Streamlit Community Cloud reads this file
+# before the repository's root requirements.txt). The dashboard reads reports/ and needs
+# no model, API or raw data.
+streamlit>=1.50
+polars>=1.20
+plotly>=5.20
+networkx>=3.0
+scipy>=1.11
